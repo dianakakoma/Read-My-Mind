@@ -14,13 +14,13 @@ def readMyMind(x):
     while feedback != "c":
         compGuess = random.randint(low,high)
     #tell the computer if their guess is too high, too low or correct and then adjust the range of possibilities accordingly.
-        feedback = input(f"Is {compGuess}, h, l or c?")
+        feedback = input(f"Is {compGuess}, too high(h), too low(l) or correct(c)?")
         if feedback == "l":
             low = compGuess + 1
             print(f"Computer, {compGuess} too low. Guess again.")
         elif feedback == "h":
             high = compGuess - 1
             print(f"Computer, {compGuess} is too high. Guess again.")
-    print("Correct!")
+    print("f{compGuess} is correct!")
 #call the function
 readMyMind(100)
